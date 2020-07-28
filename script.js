@@ -2,7 +2,7 @@
 var corn = '🌾';
 var food = '🍅';
 var field = [];
-var m = 7, n = 7;
+var m = 9, n = 9;
 var score = 0;
 var pos1 = random(0, m);
 var pos2 = random(0, n);
@@ -84,10 +84,6 @@ function down(field){
 }
 //------------------------------------------
 //функции движения
-function showButtons(){
-    document.getElementById("buttons").style.visibility="visible";
-}
-
 
 jQuery('document').ready(function(){
 
@@ -100,7 +96,7 @@ jQuery('document').ready(function(){
         set_pos(field); // расставляем юниты
         field_update(field); // выводим массив
         jQuery('#score').text(food + 'x' + score);
-        showButtons();
+        document.getElementById("buttons").style.visibility="visible";
     });
 
     $('#up').on('click', function(){
