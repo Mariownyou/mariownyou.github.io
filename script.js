@@ -34,7 +34,7 @@ function field_update(f){
         row = f[i].join(' ');
         jQuery("#field").append(row+'<br>');
     }
-    jQuery('#score').text(food + 'x' + score);
+    jQuery('#score').text(score);
 }
 
 function set_pos(f){
@@ -95,7 +95,7 @@ jQuery('document').ready(function(){
         make_field(field); // заполняем массив
         set_pos(field); // расставляем юниты
         field_update(field); // выводим массив
-        jQuery('#score').text(food + 'x' + score);
+        jQuery('#score').text(score);
         document.getElementById("buttons").style.visibility="visible";
     });
 
