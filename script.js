@@ -28,13 +28,13 @@ function field_update(f){
     if (pos1 == fpos1 && pos2 == fpos2){
         make_food(f);
         score++;
-        jQuery('#score').text('Your Score: ' + score);
     }
     $( "#field" ).empty();
     for (let i = 0; i < f.length; i++){
         row = f[i].join(' ');
         jQuery("#field").append(row+'<br>');
     }
+    jQuery('#score').text(food + 'x' + score);
 }
 
 function set_pos(f){
@@ -94,7 +94,7 @@ jQuery('document').ready(function(){
         make_field(field); // заполняем массив
         set_pos(field); // расставляем юниты
         field_update(field); // выводим массив
-        jQuery('#score').text('Your Score: ' + score);
+        jQuery('#score').text(food + 'x' + score);
     });
 
     $('#up').on('click', function(){
