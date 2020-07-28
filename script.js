@@ -84,8 +84,13 @@ function down(field){
 }
 //------------------------------------------
 //функции движения
+function showButtons(){
+    document.getElementById("buttons").style.visibility="visible";
+}
+
 
 jQuery('document').ready(function(){
+
     jQuery('#play').on('click', function(){
         score = 0;
         turtle = jQuery('#input1').val();// обновляем черепашку
@@ -95,6 +100,7 @@ jQuery('document').ready(function(){
         set_pos(field); // расставляем юниты
         field_update(field); // выводим массив
         jQuery('#score').text(food + 'x' + score);
+        showButtons();
     });
 
     $('#up').on('click', function(){
