@@ -87,12 +87,14 @@ function down(field){
 
 jQuery('document').ready(function(){
     jQuery('#play').on('click', function(){
+        score = 0;
         turtle = jQuery('#input1').val();// обновляем черепашку
         corn = jQuery('#input2').val();// обновляем поле
         food = jQuery('#input3').val();//обновляем еду
         make_field(field); // заполняем массив
         set_pos(field); // расставляем юниты
         field_update(field); // выводим массив
+        jQuery('#score').text('Your Score: ' + score);
     });
 
     $('#up').on('click', function(){
