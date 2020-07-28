@@ -2,7 +2,7 @@
 var corn = '🌾';
 var food = '🍅';
 var field = [];
-var m = 7, n = 10;
+var m = 10, n = 10;
 var score = 0;
 var pos1 = random(0, m);
 var pos2 = random(0, n);
