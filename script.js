@@ -2,7 +2,8 @@
 var corn = '🌾';
 var food = '🍅';
 var field = [];
-var m = 10, n = 10;
+var m = 7, n = 10;
+var score = 0;
 var pos1 = random(0, m);
 var pos2 = random(0, n);
 var fpos1 = random(0, m);
@@ -26,6 +27,8 @@ function make_field(f){
 function field_update(f){
     if (pos1 == fpos1 && pos2 == fpos2){
         make_food(f);
+        score++;
+        jQuery('#score').text('Your Score: ' + score);
     }
     $( "#field" ).empty();
     for (let i = 0; i < f.length; i++){
@@ -86,10 +89,10 @@ jQuery('document').ready(function(){
     jQuery('#play').on('click', function(){
         turtle = jQuery('#input1').val();// обновляем черепашку
         corn = jQuery('#input2').val();// обновляем поле
+        food = jQuery('#input3').val();//обновляем еду
         make_field(field); // заполняем массив
         set_pos(field); // расставляем юниты
         field_update(field); // выводим массив
-        
     });
 
     $('#up').on('click', function(){

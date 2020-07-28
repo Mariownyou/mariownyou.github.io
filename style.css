@@ -1,81 +1,32 @@
-﻿body{
-    background-image: url(images/2.png);
-    text-align: center;
-    
-    font-size: 30px;
-    font-family: Arial;
-}
 
-.main{
-    position: relative;
-    margin-bottom: 5px;
-    margin-top: 10px;
+body{
+    background-image: url(1.jpg);
 }
-
 input{
+    text-align: center;
+}
+.form-control{
     width: 50px; height: 50px;
-    vertical-align: middle;
-    text-align: center;
-    font-size: 26px;
-    padding: 10px;
-    border-radius: 30px;
-    border: 2px solid black;
 }
-
-button{
-    background-color: red;
-    width: 170px; height: 50px;
-    color: white;
+#title{
+    font-size: 30px;
     font-weight: bold;
-    font-size: 24px;
-    position: relative;
-    text-align: center;
-    border-radius: 30px;
-    border: 2px solid red;
-
+    background-color: orange;
 }
-
-button:hover{
-    
+#player{
+    background-color: green;
 }
-
-button:active {
-    
-    background-color: rgb(255, 102, 0);
-  }
-
-h1{
-    color: rgb(3, 82, 3);
-    padding: 10px;
-    border: 3px solid #fff;
-    border-radius: 100px;
-    background: #fc0;
-    margin-left: 30%;
-    margin-right: 30%;
+#score-box{
+    font-weight: bold;
+    background-color: White;
+    color: black;
 }
-
 #field{
-    border: 3px solid green;
-    background-color: greenyellow;
+    font-size: 30px;
 }
-
-#up{
-    
+@media (min-width: 768px) {
+    .h-md-100 { height: 100vh; }
 }
-#down{
-    
-}
-#left{
-    
-}
-#right{
-    
-}
-
-#c1{
-    position: relative;
-    width: 400px; height: 200px;
-    border: 3px solid black;
-    background-image: url(images/setka.png);
-    margin: 40px;
-}
+.btn-round { border-radius: 30px; }
+.bg-indigo { background: indigo; }
+.text-cyan { color: #35bdff; }
